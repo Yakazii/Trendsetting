@@ -1,0 +1,747 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 100%;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5% 2%;
+    background-color: rgba(187, 181, 181, 0.514); 
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+.logo img {
+    max-width: 100%;
+    width: 15vw;           
+    height: auto;          
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    position: relative;
+    font-family: Cabin;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li .dropdown {
+    display: none; 
+    position: absolute; 
+    top: 100%;
+    left: -40px;
+    background-color: rgb(255, 255, 255); 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.627); 
+    z-index: 1; 
+    text-align: center;
+}
+
+nav ul li:hover .dropdown {
+    display: block; /* para makita yung dropdown*/
+}
+
+nav ul li .dropdown ul {
+    padding: 5px 0; 
+    margin: 0; 
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li .dropdown ul li {
+    white-space: nowrap;
+}
+
+nav ul li .dropdown ul li a {
+    padding: 10px 20px; 
+    display: block; 
+    color: #000; 
+    text-decoration: none; 
+}
+
+nav ul li .dropdown ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1); 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #666;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+   
+}
+.current {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+#current {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.lookbookName {
+    text-align: center;
+    font-size: 2.5em; 
+    margin: 2em 0;
+    color: #222;
+    font-family: Questrial;
+}
+
+.lookbook-section {
+    display: flex; 
+    flex-wrap: wrap;
+    margin: 1.5rem 0; 
+    width: 100%;
+}
+
+.lookbook-images {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; 
+    flex: 1;
+    margin-left: 5%;
+}
+
+.white {
+    color: rgba(0, 0, 0, 0);
+}
+
+.image-item {
+    text-align: center;
+    margin: 0;
+}
+
+.image-item img {
+    width: 30vw; 
+    height: auto; 
+    border-radius: 0; 
+    transition: transform 0.3s; 
+}
+
+.image-item img:hover {
+    transform: scale(1.05); 
+}
+
+.description {
+    margin-top: 30%;
+    z-index: 10;
+    flex: 1;
+    padding: 1.25rem;
+}
+
+.description p {
+    margin: 0;
+    gap: 0;
+    text-align: center;
+    
+}
+
+
+.description2 {
+    margin-top: 30%;
+    z-index: 10;
+    flex: 1;
+    padding: 1.25rem;
+}
+
+.description2 p {
+    margin: 0;
+    gap: 0;
+    text-align: center;
+    
+}
+
+.bastaTitle {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.bastaPrice img {
+    width: 10vw; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.list {
+    color: #666;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: #f6f6f600; 
+    padding: 1.25rem 0;      
+    text-align: center;    
+    border-top: 0; 
+    position: relative; 
+    width: 100%;          
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 50rem;     
+    margin: 0 auto;    
+}
+
+.social-icons {
+    margin-bottom: 1rem; 
+    display: flex;    
+    justify-content: center;  
+    gap: 1rem;    
+}
+
+.social-icons a {
+    text-decoration: none;   
+    display: inline-block;   
+}
+
+.icon {
+    width: 1.5rem;     
+    height: 1.5rem;
+    display: block;
+}
+
+footer p {
+    font-size: 0.875rem;   
+    color: #333;    
+    margin: 0.3rem 0;    
+    line-height: 1.5;  
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Width of the image */
+    max-width: 700px; /* Max width of the image */
+
+    top: 50%;
+    transform: translateY(8%); /* Adjust this value to move the image down */
+    max-height: 90%; /* Limit the height of the image */
+    overflow: auto;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+/* Button styles */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+    border-radius: 5px;
+}
+
+.prev {
+    left: 10px; /* Positioning for previous button */
+}
+
+.next {
+    right: 10px; /* Positioning for next button */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8); /* Darker background on hover */
+}
+
+@media (max-width: 1024px){
+    nav ul li .dropdown {
+        display: none; 
+        position: absolute; 
+        top: 100%;
+        left: -40px;
+        background-color: rgb(255, 255, 255); 
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.627); 
+        z-index: 1; 
+        text-align: center;
+    }
+
+    nav ul li .dropdown.active {
+        display: block; /* Show when active */
+    }
+
+    .dropdown {
+        display: none;
+    }
+    
+    .dropdown.show {
+        display: block;
+    }
+    
+    .bastaPrice img{
+        width: 60%;
+    }
+
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1000; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+    }
+    
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%; /* Width of the image */
+        max-width: 500px; /* Max width of the image */
+    
+        top: 50%;
+        transform: translateY(12%); /* Adjust this value to move the image down */
+        max-height: 80%; /* Limit the height of the image */
+        overflow: auto;
+    }
+    
+    footer {
+        text-align: center;
+        margin-left:0;
+        background-color: white;
+        top: 2%;
+        border-top: 0;
+    }
+    
+    .footer-container {
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+       
+    }
+}
+
+@media (max-width: 768px) {
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; 
+    }
+
+    header {
+        flex-direction: column; 
+        align-items: center;  
+    }
+
+    .logo img {
+        padding-top: 3vh;
+        width: 40vw; 
+        justify-content: center;
+    }
+
+    nav ul {
+        padding-top: 2vh;
+        flex-direction: row; 
+        gap: 1rem; 
+        list-style: none; 
+        margin-top: 1rem; 
+    }
+
+    nav ul li .dropdown {
+        display: none; 
+        position: absolute; 
+        top: 100%;
+        left: -40px;
+        background-color: rgb(255, 255, 255); 
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.627); 
+        z-index: 1; 
+        text-align: center;
+    }
+
+    nav ul li .dropdown.active {
+        display: block; /* Show when active */
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .dropdown.show {
+        display: block;
+    }
+
+    .lookbookName {
+        text-align: center;
+        font-size: 1.5rem; 
+        margin: 2em 0;
+        color: #222;
+    }
+    
+    .lookbook-section {
+        display: flex; 
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 1.5rem 0; 
+        width: 1%;
+        
+    }
+    
+    .lookbook-images {
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5rem; 
+        flex: 1;
+    }
+    
+    .image-item {
+        text-align: center;
+        margin: 0;
+    }
+    
+    .image-item img {
+        width: 50vw; 
+        height: auto; 
+        border-radius: 0; 
+        transition: transform 0.3s; 
+    } 
+    .description {
+        margin-top: 80%;
+        z-index: 10;
+        flex: 1;
+        padding: 1.25rem;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    
+    .description p {
+        margin: 0 auto;
+        gap: 0;
+        text-align: center;
+        
+    }
+    
+    .bastaTitle {
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .bastaPrice img {
+        width: 30vw; 
+        height: auto; 
+        display: block; 
+        margin: 0 auto; 
+    }
+    
+    .list {
+        color: #666;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        list-style: none;
+        line-height: 1.5;
+        padding-bottom: 10%;
+    }
+
+    .dropdown {
+        display: none;
+    }   
+    .dropdown.show {
+        display: block;
+    }
+
+    .description2 {
+        margin-top: 80%;
+        z-index: 10;
+        flex: 1;
+        padding: 1.25rem;
+        margin: 0 auto;
+        justify-content: center;
+       
+    }
+    
+    .description2 p {
+        margin: 0 auto;
+        gap: 0;
+        text-align: center;
+        
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%; /* Width of the image */
+        max-width: 700px; /* Max width of the image */
+    
+        top: 10%;
+        transform: translateY(20%); /* Adjust this value to move the image down */
+        max-height: 80%; /* Limit the height of the image */
+        overflow: auto;
+    }
+
+    footer {
+        text-align: center;
+        margin-left: 385px;
+    }
+    
+    .footer-container {
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+       
+    }
+
+    footer p {
+        white-space: nowrap;
+        margin: 0; 
+        font-size: 0.875rem; 
+        color: #333333;
+    }
+
+}
+
+@media (max-width: 480px) {
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; 
+    }
+
+    header {
+        flex-direction: column; 
+        align-items: center;  
+        height: 120px; /* Set a specific height for the header */
+        padding: 10px 0; 
+    }
+
+    .logo img {
+        padding-top: 3vh;
+        width: 40vw; 
+        justify-content: center;
+    }
+
+    nav ul {
+        padding-top: 2vh;
+        flex-direction: row; 
+        gap: 1rem; 
+        list-style: none; 
+        margin-top: 1rem; 
+    }
+
+    
+
+    nav ul li .dropdown {
+        display: none; 
+        position: absolute; 
+        top: -9px;
+        left: -40px;
+        background-color: rgb(255, 255, 255); 
+        box-shadow: 0 2px 10px rgb(0, 0, 0); 
+        z-index: 1; 
+        text-align: center;
+    }
+    nav ul li .dropdown.active {
+        display: block; /* Show when active */
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .dropdown.show {
+        display: block;
+    }
+
+    .lookbookName {
+        text-align: center;
+        font-size: 1.5rem; 
+        margin: 2em 0;
+        color: #222;
+    }
+    
+    .lookbook-section {
+        display: flex; 
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 1.5rem 0; 
+        width: 1%;
+        
+    }
+    
+    .lookbook-images {
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5rem; 
+        flex: 1;
+    }
+    
+    .image-item {
+        text-align: center;
+        margin: 0;
+    }
+    
+    .image-item img {
+        width: 50vw; 
+        height: auto; 
+        border-radius: 0; 
+        transition: transform 0.3s; 
+    } 
+    .description {
+        margin-top: 80%;
+        z-index: 10;
+        flex: 1;
+        padding: 1.25rem;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    
+    .description p {
+        margin: 0 auto;
+        gap: 0;
+        text-align: center;
+        
+    }
+    
+    .bastaTitle {
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .bastaPrice img {
+        width: 50vw; 
+        height: auto; 
+        display: block; 
+        margin: 0 auto; 
+    }
+    
+    .list {
+        color: #666;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        list-style: none;
+        line-height: 1.5;
+        padding-bottom: 10%;
+    }
+
+    .dropdown {
+        display: none;
+    }   
+    .dropdown.show {
+        display: block;
+    }
+
+    .description2 {
+        margin-top: 80%;
+        z-index: 10;
+        flex: 1;
+        padding: 1.25rem;
+        margin: 0;
+        padding-left: 5%;
+       
+    }
+    
+    .description2 p {
+        margin: 0 auto;
+        gap: 0;
+        text-align: center;
+        
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%; /* Width of the image */
+        max-width: 700px; /* Max width of the image */
+    
+        top: 50%;
+        transform: translateY(30%); /* Adjust this value to move the image down */
+        max-height: 80%; /* Limit the height of the image */
+        overflow: auto;
+    }
+
+    footer {
+        text-align: center;
+        margin-left: 220px;
+        background-color: white;
+    }
+    
+    .footer-container {
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+       
+    }
+
+    footer p {
+        white-space: nowrap;
+        margin: 0; 
+        font-size: 0.875rem; 
+        color: #333333;
+    }
+    
+}
