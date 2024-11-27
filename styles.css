@@ -645,7 +645,7 @@ footer {
 
     .indicators {
         position: absolute;
-        bottom: 22.9rem; 
+        bottom: 22.8rem; 
         left: 50%; 
         transform: translateX(-50%); 
         display: flex; 
