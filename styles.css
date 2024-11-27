@@ -609,8 +609,10 @@ footer {
         display: none;
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: 85%;
         transition: transform 1.5s ease;
+        right: -1.2rem;
+        top: 15rem;
     }
 
     .mySlides.active {
@@ -629,21 +631,21 @@ footer {
     }
 
     .mySlides img {
-        width: 100%;
-        height: 50%;
+        width: 90%;
+        height: 30%;
     }
 
     .text {
         display: inline-flex;
-        top: 18%;
+        top: 14%;
         height: 25rem;
         width: 25rem;
-        left: 3rem;
+        left: 1rem;
     }
 
     .indicators {
         position: absolute;
-        bottom: 28.5%; 
+        bottom: 22.9rem; 
         left: 50%; 
         transform: translateX(-50%); 
         display: flex; 
