@@ -706,30 +706,6 @@ footer {
 
     .indicators {
         display: none;
-        position: absolute;
-        bottom: 22.8rem; 
-        left: 50%; 
-        transform: translateX(-50%); 
-        display: flex; 
-        gap: 10px; 
-    }
-
-    .indicator {
-        cursor: pointer;
-        width: 10px; 
-        height: 10px; 
-        border-radius: 50%; 
-        background-color: rgba(255, 255, 255, 0.258);
-        display: inline-block;
-        border: 2px solid rgba(0, 0, 0, 0.7);
-    }
-
-    .indicator.active {
-        background-color: rgb(255, 255, 255); 
-    }
-
-    .indicator:hover {
-        background-color: rgba(255, 255, 255, 0.9); 
     }
 
     .slideshow-container{
