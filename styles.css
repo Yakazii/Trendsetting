@@ -98,6 +98,7 @@ nav ul li a:hover {
 
 
 .slideshow-container {
+    cursor: pointer;
     position: relative;
     width: 90%; 
     height: 90%; 
@@ -435,7 +436,6 @@ footer {
 }
 
 
-
 @media (max-width: 768px) {
     header {
         flex-direction: column; 
@@ -644,6 +644,7 @@ footer {
     }
 
     .indicators {
+        display: none;
         position: absolute;
         bottom: 22.8rem; 
         left: 50%; 
