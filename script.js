@@ -61,6 +61,34 @@ document.addEventListener('mousemove', (e) => {
 document.addEventListener('mouseup', () => {
     isDragging = false; // Reset dragging
 });
+
+// Optional: Touch support for mobile devices
+slidesContainer.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    startX = e.touches[0].clientX;
+});
+
+slidesContainer.addEventListener('touchmove', (e) => {
+    if (isDragging) {
+        const deltaX = e.touches[0].clientX - startX;
+        if (deltaX > 50) { // Dragged right
+            currentSlide(-1);
+            isDragging = false; // Reset dragging
+        } else if (deltaX < -50) { // Dragged left
+            currentSlide(1);
+            isDragging = false; // Reset dragging
+        }
+    }
+});
+
+slidesContainer.addEventListener('touchend', () => {
+    isDragging = false; // Reset dragging
+});
+
+document.addEventListener('mouseup', () => {
+    isDragging = false; // Reset dragging
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     // Define the dropdown toggle and dropdown menu
     const dropdownToggle = document.querySelector('.dropdown-toggle');

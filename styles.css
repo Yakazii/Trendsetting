@@ -99,13 +99,11 @@ nav ul li a:hover {
 
 .slideshow-container {
     cursor: pointer;
-    position: relative;
+    position: absolute;
     width: 90%; 
     height: 90%; 
     overflow: hidden;
-    margin-top: 0;
-    justify-content: center;
-    align-items: center;
+    top: 11%;
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -317,18 +315,17 @@ footer {
         text-decoration: underline;
       }
     
-    .slideshow-container {
-        position: relative;
-        width: 100%; 
+      .slideshow-container {
+        cursor: pointer;
+        position: absolute;
+        width: 90%; 
+        height: 90%; 
         overflow: hidden;
-        margin-top: 0;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0;
-        margin-right: 0;
-
+        top: 11%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
-
+    
     .mySlides {
         display: none;
         position: absolute;
@@ -433,6 +430,38 @@ footer {
         align-items: center; 
        
     }
+
+    footer {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0);
+        padding: 20px 0;
+        text-align: center;
+        z-index: 1000;
+      }
+    
+    
+      .social-icons {
+        margin-bottom: 10px;
+      }
+    
+      .social-icons a {
+        margin: 0;
+        text-decoration: none;
+      }
+    
+      .icon {
+        width: 15px;
+        height: 15px;
+      }
+    
+      footer p {
+        font-size: 10px;
+        color: #333;
+        margin: 0;
+      }
 }
 
 
@@ -462,17 +491,16 @@ footer {
 
         
     .slideshow-container {
-        position: relative;
-        width: 100%; 
+        cursor: pointer;
+        position: absolute;
+        width: 90%; 
+        height: 90%; 
         overflow: hidden;
-        margin-top: 0;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0;
-        margin-right: 0;
-
+        top: 11%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
-
+    
     .mySlides {
         display: none;
         position: absolute;
@@ -564,6 +592,38 @@ footer {
         display: block;
     }
 
+    footer {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0);
+        padding: 20px 0;
+        text-align: center;
+        z-index: 1000;
+      }
+    
+    
+      .social-icons {
+        margin-bottom: 10px;
+      }
+    
+      .social-icons a {
+        margin: 0;
+        text-decoration: none;
+      }
+    
+      .icon {
+        width: 15px;
+        height: 15px;
+      }
+    
+      footer p {
+        font-size: 10px;
+        color: #333;
+        margin: 0;
+      }
+
 }
 
 /*pang cellphone to */
@@ -594,7 +654,7 @@ footer {
 
         
     .slideshow-container {
-        position: relative;
+        position: absolute;
         width: 100%; 
         overflow: hidden;
         margin-top: 0;
@@ -602,6 +662,7 @@ footer {
         align-items: center;
         margin-left: 0;
         margin-right: 0;
+        top: 0px;
 
     }
 
@@ -699,5 +760,37 @@ footer {
     .dropdown.show {
         display: block;
     }
+
+    footer {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0);
+        padding: 20px 0;
+        text-align: center;
+        z-index: 1000;
+      }
+    
+    
+      .social-icons {
+        margin-bottom: 10px;
+      }
+    
+      .social-icons a {
+        margin: 0;
+        text-decoration: none;
+      }
+    
+      .icon {
+        width: 15px;
+        height: 15px;
+      }
+    
+      footer p {
+        font-size: 10px;
+        color: #333;
+        margin: 0;
+      }
 
 }
