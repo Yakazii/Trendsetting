@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// Get the modal element
+// para sa modal effect
 var modal = document.querySelector('.modal');
 var modalImg = document.getElementById("modalImage");
 var captionText = document.getElementById("caption");
@@ -66,16 +66,16 @@ function changeImage(direction) {
         currentIndex = 0; // Wrap to first image
     }
     modalImg.src = images[currentIndex].src; // Update modal image
-    captionText.innerHTML = images[currentIndex].alt; // Update caption
+    captionText.innerHTML = images[currentIndex].alt; 
 }
 
-// When the user clicks on <span> (x), close the modal
+// closing it
 var closeButton = document.querySelector('.close');
 closeButton.onclick = function() {
     closeModal();
 }
 
-// When the user presses the Esc key, left arrow or right arrow keys
+// function para pwede yung esc saka yung arrow
 document.addEventListener('keydown', function(event) {
     if (event.key === "Escape") {
         closeModal(); // Close the modal
