@@ -69,12 +69,6 @@ function changeImage(direction) {
     captionText.innerHTML = images[currentIndex].alt; 
 }
 
-// closing it
-var closeButton = document.querySelector('.close');
-closeButton.onclick = function() {
-    closeModal();
-}
-
 // function para pwede yung esc saka yung arrow
 document.addEventListener('keydown', function(event) {
     if (event.key === "Escape") {
