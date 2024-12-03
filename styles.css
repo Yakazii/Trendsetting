@@ -725,7 +725,7 @@ footer {
     }
 
     nav ul li .dropdown.active {
-        display: block; /* Show when active */
+        display: block; 
     }
 
     .dropdown {
