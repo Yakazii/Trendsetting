@@ -670,7 +670,7 @@ footer {
         display: none;
         position: absolute;
         width: 100%;
-        height: 85%;
+        height: 100%;
         transition: transform 1.5s ease;
         right: -1.2rem;
         top: 15rem;
