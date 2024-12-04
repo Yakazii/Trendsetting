@@ -62,7 +62,7 @@ document.addEventListener('mouseup', () => {
     isDragging = false; // Reset dragging
 });
 
-// Optional: Touch support for mobile devices
+// para gumana yung touch sa mobile device
 slidesContainer.addEventListener('touchstart', (e) => {
     isDragging = true;
     startX = e.touches[0].clientX;
@@ -71,36 +71,34 @@ slidesContainer.addEventListener('touchstart', (e) => {
 slidesContainer.addEventListener('touchmove', (e) => {
     if (isDragging) {
         const deltaX = e.touches[0].clientX - startX;
-        if (deltaX > 50) { // Dragged right
+        if (deltaX > 50) { // rigth
             currentSlide(-1);
-            isDragging = false; // Reset dragging
-        } else if (deltaX < -50) { // Dragged left
+            isDragging = false; 
+        } else if (deltaX < -50) { // left
             currentSlide(1);
-            isDragging = false; // Reset dragging
+            isDragging = false;
         }
     }
 });
 
 slidesContainer.addEventListener('touchend', () => {
-    isDragging = false; // Reset dragging
+    isDragging = false; 
 });
 
 document.addEventListener('mouseup', () => {
-    isDragging = false; // Reset dragging
+    isDragging = false; 
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Define the dropdown toggle and dropdown menu
     const dropdownToggle = document.querySelector('.dropdown-toggle');
     const dropdown = document.querySelector('.dropdown');
-    const discoverLink = document.querySelector('.dropdown-toggle'); // Make sure it's correctly defined
+    const discoverLink = document.querySelector('.dropdown-toggle'); 
 
-    // Check if elements exist before attaching event listeners
-    if (dropdownToggle && dropdown) {
-        // Toggle the dropdown when the toggle link is clicked
+
+    if (dropdownToggle && dropdown) { //mag activate yung dropdown pag click
         dropdownToggle.addEventListener('click', function (event) {
             event.preventDefault();
-            dropdown.classList.toggle('show');  // Toggle visibility of the dropdown
+            dropdown.classList.toggle('show');  
             const expanded = discoverLink.getAttribute('aria-expanded') === 'true' || false;
             discoverLink.setAttribute('aria-expanded', !expanded);
             dropdown.setAttribute('aria-hidden', expanded);

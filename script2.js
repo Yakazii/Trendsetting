@@ -59,11 +59,11 @@ function closeModal() {
 
 // Change image function for next and previous buttons
 function changeImage(direction) {
-    currentIndex += direction; // Update the index based on direction
+    currentIndex += direction; // update lang yung index para sa next picture
     if (currentIndex < 0) {
         currentIndex = images.length - 1; // Wrap to last image
     } else if (currentIndex >= images.length) {
-        currentIndex = 0; // Wrap to first image
+        currentIndex = 0; 
     }
     modalImg.src = images[currentIndex].src; // Update modal image
     captionText.innerHTML = images[currentIndex].alt; 
